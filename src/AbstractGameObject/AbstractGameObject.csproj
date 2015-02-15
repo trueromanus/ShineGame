@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2A17CEE-D701-4B89-A1D5-C9F2306A0765}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbstractGameLogic</RootNamespace>
+    <AssemblyName>AbstractGameLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AssemblyBehaviourAttribute.cs" />
+    <Compile Include="Attributes\GameActionAttribute.cs" />
+    <Compile Include="Attributes\GameEventAttribute.cs" />
+    <Compile Include="Attributes\GameStateAttribute.cs" />
+    <Compile Include="Attributes\ModelBindStateAttribute.cs" />
+    <Compile Include="Attributes\ObjectBindBehaviourAttribute.cs" />
+    <Compile Include="Audio\IMusicPlayer.cs" />
+    <Compile Include="Audio\IMusicTrack.cs" />
+    <Compile Include="Audio\ISound.cs" />
+    <Compile Include="CameraAttachedMode.cs" />
+    <Compile Include="CameraMode.cs" />
+    <Compile Include="Factories\ILevelFactory.cs" />
+    <Compile Include="Factories\IObjectBehaviours.cs" />
+    <Compile Include="GameLevel\ILevelLoader.cs" />
+    <Compile Include="GameLevel\ILevelManager.cs" />
+    <Compile Include="GUI\IConsole.cs" />
+    <Compile Include="GUI\IMouseCursor.cs" />
+    <Compile Include="GUI\IWindowMarkupReader.cs" />
+    <Compile Include="ObjectBehavior\IEventCollection.cs" />
+    <Compile Include="ObjectBehavior\IObjectEventHandled.cs" />
+    <Compile Include="State\IEvent.cs" />
+    <Compile Include="Factories\IBehaviourFactory.cs" />
+    <Compile Include="Factories\IFactoryHost.cs" />
+    <Compile Include="Factories\IGameObjectFactory.cs" />
+    <Compile Include="Factories\IGUIFactory.cs" />
+    <Compile Include="Factories\IPhysicsFactory.cs" />
+    <Compile Include="Factories\IStateFactory.cs" />
+    <Compile Include="GameMenu\BackgroundImageMode.cs" />
+    <Compile Include="GameMenu\IMenu.cs" />
+    <Compile Include="GameMenu\IMenuItem.cs" />
+    <Compile Include="GameObjectBorder.cs" />
+    <Compile Include="GUI\IGUIButton.cs" />
+    <Compile Include="GUI\IGUICheckBox.cs" />
+    <Compile Include="GUI\IGUIElement.cs" />
+    <Compile Include="GUI\IGUIManager.cs" />
+    <Compile Include="GUI\IGUITextBox.cs" />
+    <Compile Include="GUI\IGUIWindow.cs" />
+    <Compile Include="IGameObjectInitialization.cs" />
+    <Compile Include="IGameObjectReadeable.cs" />
+    <Compile Include="GameLevel\ILevel.cs" />
+    <Compile Include="ObjectBehavior\IGameObjectBehaviourable.cs" />
+    <Compile Include="ObjectVisual\IAnimatedObject.cs" />
+    <Compile Include="ObjectVisual\IBackground.cs" />
+    <Compile Include="ICamera.cs" />
+    <Compile Include="IColor.cs" />
+    <Compile Include="IDrawLevel.cs" />
+    <Compile Include="ObjectVisual\IEffect.cs" />
+    <Compile Include="IGameObject.cs" />
+    <Compile Include="ObjectVisual\IGameObjectVisual.cs" />
+    <Compile Include="IGameState.cs" />
+    <Compile Include="IGameWorld.cs" />
+    <Compile Include="IInputGameState.cs" />
+    <Compile Include="ObjectVisual\IParallaxBackground.cs" />
+    <Compile Include="ObjectVisual\IRectangle.cs" />
+    <Compile Include="ObjectVisual\IStaticObject.cs" />
+    <Compile Include="ObjectVisual\IText.cs" />
+    <Compile Include="ObjectVisual\ITileAnimatedObject.cs" />
+    <Compile Include="ObjectVisual\ITileMap.cs" />
+    <Compile Include="KeyboardButtonKey.cs" />
+    <Compile Include="MouseButtonKey.cs" />
+    <Compile Include="ObjectBehavior\IObjectBehaviors.cs" />
+    <Compile Include="ObjectBehavior\IObjectBehavior.cs" />
+    <Compile Include="ObjectBehavior\IVisualObjectBehaviour.cs" />
+    <Compile Include="ObjectVisual\IHidden.cs" />
+    <Compile Include="ObjectVisual\IVector2.cs" />
+    <Compile Include="ParallaxDirection.cs" />
+    <Compile Include="Physics\IPhysicsBox.cs" />
+    <Compile Include="Physics\IPhysicsLine.cs" />
+    <Compile Include="Physics\IPhysicsObject.cs" />
+    <Compile Include="Physics\IPhysicsWorld.cs" />
+    <Compile Include="Physics\PhysicsType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IGameObjectDisposable.cs" />
+    <Compile Include="State\IEventRunning.cs" />
+    <Compile Include="State\IObjectState.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

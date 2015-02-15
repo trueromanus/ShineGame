@@ -1,0 +1,44 @@
+﻿<Window x:Class="LevelPropertyEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shine level property editor" Height="450" Width="725">
+
+	<Window.Resources>
+		<Style x:Key="ButtonStyle">
+			<Setter Property="Button.Margin" Value="3"></Setter>
+		</Style>
+	</Window.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<DockPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" LastChildFill="True">
+			<Button DockPanel.Dock="Bottom">Сохранить</Button>
+			<ListBox Name="ListBoxObjects">
+				<ListBoxItem>Пустое значение</ListBoxItem>
+				<ListBoxItem>Пустое значение</ListBoxItem>
+				<ListBoxItem>Пустое значение</ListBoxItem>
+				<ListBoxItem>Пустое значение</ListBoxItem>
+				<ListBoxItem>Пустое значение</ListBoxItem>
+				<ListBoxItem>Пустое значение</ListBoxItem>
+			</ListBox>
+		</DockPanel>
+		<StackPanel Grid.Row="1" Grid.Column="0">
+			<TextBlock Margin="3">Состояние 1</TextBlock>
+			<TextBox Margin="3"></TextBox>
+			<TextBlock Margin="3">Состояние 3</TextBlock>
+			<TextBox Margin="3"></TextBox>
+		</StackPanel>
+		<DockPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Margin="3">
+			<Button Style="{StaticResource ButtonStyle}">Сохранить</Button>
+			<Button Style="{StaticResource ButtonStyle}">Выход</Button>
+		</DockPanel>
+	</Grid>
+
+</Window>
+

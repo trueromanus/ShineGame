@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{743949DA-BCF6-4C42-B866-BE1811F7D13E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrisonerLevelBehaviours</RootNamespace>
+    <AssemblyName>PrisonerLevelBehaviours</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Environment\Box.cs" />
+    <Compile Include="Environment\Button.cs" />
+    <Compile Include="Environment\Door.cs" />
+    <Compile Include="Actions\HeroInputController.cs" />
+    <Compile Include="Actions\PlatformerMoving.cs" />
+    <Compile Include="Environment\StaticObject.cs" />
+    <Compile Include="Equipment\Stone.cs" />
+    <Compile Include="Attributes\AdditionalInformationAttribute.cs" />
+    <Compile Include="Audio\MusicPlayer.cs" />
+    <Compile Include="Collisions\CollisionDetector.cs" />
+    <Compile Include="GUI\Clickable.cs" />
+    <Compile Include="GUI\Mouse.cs" />
+    <Compile Include="Levels\LevelChanger.cs" />
+    <Compile Include="Models\DirectEdge.cs" />
+    <Compile Include="Models\MovingControllerModel.cs" />
+    <Compile Include="Models\PlatformerLimitModel.cs" />
+    <Compile Include="Models\PlatformerStateModel.cs" />
+    <Compile Include="Models\PlatformerStateType.cs" />
+    <Compile Include="ObjectBehaviour.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateInputHelper.cs" />
+    <Compile Include="Statistics\HeroStatistics.cs" />
+    <Compile Include="VisualRoutines\TileAnimatedPlayer.cs" />
+    <Compile Include="VisualRoutines\TileAnimatedPlayerNoLoop.cs" />
+    <Compile Include="VisualRoutines\TileStaticPlayer.cs" />
+    <Compile Include="World\Camera.cs" />
+    <Compile Include="World\World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractGameObject\AbstractGameObject.csproj">
+      <Project>{E2A17CEE-D701-4B89-A1D5-C9F2306A0765}</Project>
+      <Name>AbstractGameObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

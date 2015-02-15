@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3803590-59A3-4E6B-9657-AFA628E90C2D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShineGame</RootNamespace>
+    <AssemblyName>ShineGame</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Box2D.XNA">
+      <HintPath>..\Common\3rdLibraries\Phisics\Box2D.XNA.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ProjectMercury">
+      <HintPath>..\Common\3rdLibraries\Particle System\ProjectMercury.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonRoutine\VisualContainer.cs" />
+    <Compile Include="CommonRoutine\VisualContainerItem.cs" />
+    <Compile Include="CommonRoutine\VisualContainerItemFillType.cs" />
+    <Compile Include="Factories\LevelFactory.cs" />
+    <Compile Include="GUI\Button.cs" />
+    <Compile Include="CommonRoutine\ContainerTileKind.cs" />
+    <Compile Include="GUI\Element.cs" />
+    <Compile Include="GUI\GUIManager.cs" />
+    <Compile Include="GUI\ISkinResources.cs" />
+    <Compile Include="GUI\MouseCursor.cs" />
+    <Compile Include="GUI\SkinResources.cs" />
+    <Compile Include="CommonRoutine\TileManager.cs" />
+    <Compile Include="GUI\Window.cs" />
+    <Compile Include="Levels\DefaultLevelLoader.cs" />
+    <Compile Include="Levels\LevelManager.cs" />
+    <Compile Include="VisualObjects\IRectangleVisualObject.cs" />
+    <Compile Include="VisualObjects\ShineAnimatedObject.cs" />
+    <Compile Include="VisualObjects\ShineTileAnimatedObject.cs" />
+    <Compile Include="Audio\IXNASong.cs" />
+    <Compile Include="Audio\MusicPlayer.cs" />
+    <Compile Include="Audio\MusicTrack.cs" />
+    <Compile Include="Audio\ShineSound.cs" />
+    <Compile Include="VisualObjects\ShineBackground.cs" />
+    <Compile Include="VisualObjects\ShineParallaxBackground.cs" />
+    <Compile Include="BehaviourCollection.cs" />
+    <Compile Include="Cameras\ShineCamera.cs" />
+    <Compile Include="ColorImplementation.cs" />
+    <Compile Include="CommonRoutine\GameContentManager.cs" />
+    <Compile Include="CommonRoutine\GameHost.cs" />
+    <Compile Include="CommonRoutine\GameInput.cs" />
+    <Compile Include="CommonRoutine\GameInputState.cs" />
+    <Compile Include="CommonRoutine\GameSpriteBatch.cs" />
+    <Compile Include="CommonRoutine\GameState.cs" />
+    <Compile Include="DrawLevels\IContentManager.cs" />
+    <Compile Include="DrawLevels\ShineDrawLevel.cs" />
+    <Compile Include="VisualObjects\ShineEffect.cs" />
+    <Compile Include="EventRaises.cs" />
+    <Compile Include="Factories\BehavioursFactory.cs" />
+    <Compile Include="Factories\Box2DPhysicsFactory.cs" />
+    <Compile Include="Factories\FactoryHost.cs" />
+    <Compile Include="Factories\GameObjectFactory.cs" />
+    <Compile Include="Factories\GUIFactory.cs" />
+    <Compile Include="Factories\StateFactory.cs" />
+    <Compile Include="GameObjectVisualImplementation.cs" />
+    <Compile Include="GameWorlds\GameWorld.cs" />
+    <Compile Include="Game\MainGame.cs" />
+    <Compile Include="VisualObjects\HiddenObject.cs" />
+    <Compile Include="Levels\ShineLevel.cs" />
+    <Compile Include="Menus\Menu.cs" />
+    <Compile Include="Menus\MenuItem.cs" />
+    <Compile Include="ObjectState.cs" />
+    <Compile Include="Physics\BasicPhysicsObject.cs" />
+    <Compile Include="Physics\Box2dBox.cs" />
+    <Compile Include="Physics\Box2dLine.cs" />
+    <Compile Include="Physics\Box2dWorld.cs" />
+    <Compile Include="Physics\IBox2dBody.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShineEvent.cs" />
+    <Compile Include="ShineEventCollection.cs" />
+    <Compile Include="ShineGameObjectFactories.cs" />
+    <Compile Include="ShineRectangle.cs" />
+    <Compile Include="ShineVector2.cs" />
+    <Compile Include="VisualObjects\ShineStaticObject.cs" />
+    <Compile Include="VisualObjects\ShineText.cs" />
+    <Compile Include="VisualObjects\ShineTileMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractGameObject\AbstractGameObject.csproj">
+      <Project>{E2A17CEE-D701-4B89-A1D5-C9F2306A0765}</Project>
+      <Name>AbstractGameObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameLevel\GameLevel.csproj">
+      <Project>{06a28fe8-8f7b-4475-9360-4621bcf0b645}</Project>
+      <Name>GameLevel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameMathHelpers\GameMathHelpers.csproj">
+      <Project>{9742F288-BBBF-49AF-AD50-6F61AD69E210}</Project>
+      <Name>GameMathHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
